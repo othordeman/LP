@@ -1,0 +1,5 @@
+middlewaren verkar fungera
+
+Loggning med tredjepartsmodul
+
+use strict ?
