@@ -1,4 +1,6 @@
 {
     "username": "texteditor",
-    "password": "hejhej"
+    "password": "hejhej",
+    "collectionName": "LP-1",
+    "dns": "mongodb://localhost:27017/LP"
 }

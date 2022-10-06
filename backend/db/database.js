@@ -1,31 +1,25 @@
 const mongo = require("mongodb").MongoClient;
 const config = require('./config.json')
-const collectionName = "LP-1"
 
-
-// testing update for git
-
+/* This connects to the database, and returns collection and client. */
 const database = {
     getDb: async function getDb () {
 
-        let dsn = 'mongodb://localhost:27017/LP';
+        let dns = config.dns;
     
         // if (process.env.NODE_ENV === 'test') {
-        //     dsn = "mongodb://localhost:27017/";
+        //     dns = "mongodb://localhost:27017/";
         // }
 
-
-
-        const client = await mongo.connect(dsn, {
+        const client = await mongo.connect(dns, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
 
         const db = await client.db();
-        const collection = await db.collection(collectionName);
-        console.log(collection)
+        const collection = await db.collection(config.collectionName);
+
         return {
-            db: db,
             collection: collection,
             client: client
         }

@@ -1,5 +1,12 @@
-middlewaren verkar fungera
-
-Loggning med tredjepartsmodul
 
 use strict ?
+
+https://www.discogs.com/developers#page:images
+https://www.discogs.com/developers/#page:database,header:database-search
+
+
+I om oss
+kör vita skivspelaren och svart text? uppe till vänster
+
+
+I header fixa responsiviteten vid mindre telefoner
