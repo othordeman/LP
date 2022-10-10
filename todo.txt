@@ -5,8 +5,23 @@ https://www.discogs.com/developers#page:images
 https://www.discogs.com/developers/#page:database,header:database-search
 
 
-I om oss
-kör vita skivspelaren och svart text? uppe till vänster
+
+Discogs api
+
+Consumer Key	NPkenqtMcGtJBhisFHDJ
+Consumer Secret	jZeWccNQZXNBlNAUrnOqCWFDbQYtCyWg
+Request Token URL	https://api.discogs.com/oauth/request_token
+Authorize URL	https://www.discogs.com/oauth/authorize
+Access Token URL	https://api.discogs.com/oauth/access_token
 
 
-I header fixa responsiviteten vid mindre telefoner
+
+LPinfo sidan, gör en tillbaka knapp?
+Fundera på mer info i gridet, kanske pris eller anmärkning ?
+
+Tis Flera sidor (första sidan), samt fixa utvalda LPs
+Ons Om + Kontakt
+Tors Inlogg
+Fre Inlogg
+
+#010203 svart color

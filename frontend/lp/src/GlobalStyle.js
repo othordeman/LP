@@ -3,9 +3,6 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 
   /*==================== GOOGLE FONTS ====================*/
-  /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"); */
-
-
 
   :root {
 
@@ -23,9 +20,8 @@ export const GlobalStyle = createGlobalStyle`
     /*========== Colors ==========*/
     /* Change favorite color */
     //--hue-color: 2350;
-    --hue-color: 2350;
+    --hue-color: #231b1d;
     /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
-
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 69%, 61%);
     --first-color-second: hsl(var(--hue-color), 69%, 61%);
@@ -82,7 +78,7 @@ export const GlobalStyle = createGlobalStyle`
   body {  
     margin: 0;
     padding: 0;
-    background-color: #231b1d;
+    background-color: var(--hue-color);
     color: #fff;
 
     h1 {

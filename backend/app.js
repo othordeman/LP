@@ -4,7 +4,7 @@ const express = require('express');
 const bodyParser = require("body-parser");
 const cors = require('cors');
 const morgan = require('morgan');
-const user = require('./routes/user.js');
+const lp = require('./routes/lp.js');
 
 
 const app = express();
@@ -22,7 +22,7 @@ if (process.env.NODE_ENV !== 'test') {
 }
 
 // user route
-app.use(user);
+app.use(lp);
 
 
 // This is middleware called for all routes.

@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useOutsideClickAleart } from "../../hooks/useOutsideClickAleart";
 
 /* 
-    Just a header.
+    Header.
     When on smaller screens the user can toggle the navbar
     (menuswapper component)
     useRef handles click outside component.
