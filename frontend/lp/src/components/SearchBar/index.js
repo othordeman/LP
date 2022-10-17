@@ -4,7 +4,6 @@ import {Wrapper, Content} from './SearchBar.styles';
 
 const SearchBar = ({ setSearchTerm }) => {
 
-
     const [state, setState] = useState('');
     const inital = useRef(true);
 

@@ -19,7 +19,6 @@ const LpInfo = ({lp}) => {
         <Wrapper backdrop={cover_image}>
             <Content backdrop={cover_image}>
             </Content>
-        
             <Text>
                 <h1> {lp.result[0].Artist} - {lp.result[0].Titel}  </h1>
 
@@ -27,18 +26,15 @@ const LpInfo = ({lp}) => {
 
                     <div className="genre">
                         Genre:
-                        {genres.map(genre => (
-                            
-                            <span> {genre} </span>
-
+                        {genres.map((genre, index) => (
+                            <span key={index}> { genre} </span>
                         ))}
                     </div>)
                 : null}
 
                 <p> Anmärkning: {lp.result[0].Anm}  </p>
                 <p> Pris: {lp.result[0].Pris}:- </p>
-                </Text>
-
+            </Text>
         </Wrapper>
     )
 

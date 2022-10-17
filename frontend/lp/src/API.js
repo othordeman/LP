@@ -5,8 +5,8 @@ import {
 
 const Api = {
 
-    fetchAllLps: async () => {
-      const endpoint = `http://localhost:3000/lp`
+    fetchAllLps: async (page) => {
+      const endpoint = `http://localhost:3000/${page}`
       return await (await fetch(endpoint)).json();
     },
     
@@ -17,7 +17,6 @@ const Api = {
 
 
     searchAllLps: async (search) => {
-      console.log("SEARCH HÄR", search)
       const endpoint = `http://localhost:3000/search/${search}`
       return await (await fetch(endpoint)).json();
     },

@@ -5,13 +5,15 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 100;
     min-height: 60px;
 
     @media screen and (max-width: 767px) {
+        position: fixed;
+
         top: unset;
         bottom: ${props => props.showMenu ? "0" : "-100%"};
         transition: .8s ease-in-out;
@@ -37,12 +39,10 @@ export const Content = styled.div`
 /* Ta bort a sen när det är bytt till riktig logga */
 export const Logo = styled.div`
 
-    a{
+    a {
         text-decoration: none;
-        color: white;
-        font-style: italic;
-        font-weight: 300;
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+        color: black;
     }
 
     @media screen and (max-width: 767px) {
@@ -51,7 +51,7 @@ export const Logo = styled.div`
 `
 
 
-export const Nav__List = styled.div`
+export const NavList = styled.div`
 
 
     align-self: center;
@@ -119,6 +119,7 @@ export const Nav__List = styled.div`
 
         .nav__icon{
             display: inline-block;
+            justify-self: center;
         }
     }
 
@@ -153,12 +154,14 @@ export const MenuSwapper = styled.div`
     }
 
 
-    .uil.uil-times {
+    .close {
         color: black;
     }
+
+    .open {
+        color: #FAEBD7;
+    }
 `
-
-
 
 
 

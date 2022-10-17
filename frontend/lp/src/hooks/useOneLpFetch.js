@@ -13,7 +13,7 @@ export const useOneLpFetch = id => {
 
         const fetchData = async() => {
             try {
-                setError(false);
+                setError({error: false, errorMsg: ""});
                 setLoading(true);
 
                 const lp = await Api.fetchALp(id);

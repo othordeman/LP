@@ -12,14 +12,14 @@ Consumer Key	NPkenqtMcGtJBhisFHDJ
 Consumer Secret	jZeWccNQZXNBlNAUrnOqCWFDbQYtCyWg
 Request Token URL	https://api.discogs.com/oauth/request_token
 Authorize URL	https://www.discogs.com/oauth/authorize
-Access Token URL	https://api.discogs.com/oauth/access_token
+Access Token URL https://api.discogs.com/oauth/access_token
+
+
+Fundera på hämtningen av 1 LP är nödvändig, borde endast kunna skicka med informationen från hela hämtningen istället
 
 
 
-LPinfo sidan, gör en tillbaka knapp?
-Fundera på mer info i gridet, kanske pris eller anmärkning ?
-
-Tis Flera sidor (första sidan), samt fixa utvalda LPs
+Tis Flera sidor (första sidan)
 Ons Om + Kontakt
 Tors Inlogg
 Fre Inlogg

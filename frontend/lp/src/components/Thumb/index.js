@@ -1,28 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Image, Container, Text } from './Thumb.styles'
+import React  from "react";
+import { NavLink } from "react-router-dom";
+import { Image, Container, InnerContainer, Front, Back } from './Thumb.styles'
 
-const Thumb = ({image, id, clickable, titel, artist}) => {
+const Thumb = ({image, lp}) => {
 
     return (
-        <div>
-            {clickable ? (
-                <Link to={`/${id}`} Style={"text-decoration: none"}>
-                    <Container>
-                        <Image src={image} alt='lp-thumbnail' />
-                        <Text> <p>{artist}</p> <p> - {titel}</p></Text>
-
-                    </Container>
-
-                </Link>
-                ) : (
-                    <Container >
-                        <Image src={image} alt='lp-thumbnail' /> 
-                        <Text> <p>{artist}</p> <p> - {titel}</p></Text>
-                    </Container>
-                )
-            }
-        </div>
+        <NavLink to={`/${lp._id}`} style={{textDecoration: "none"}}>
+            <Container>
+                    <InnerContainer>
+                        <Front>
+                            <Image src={image} alt='lp-thumbnail' />
+                            <p>{lp.Artist}</p> <p> -{lp.Titel}</p>
+                        </Front>
+                        <Back>
+                            <p>{lp.Artist}-{lp.Titel}</p>
+                            <div>
+                                <p>Anmärkning: {lp.Anm}</p>
+                                <p>Pris: {lp.Pris}:-</p>
+                            </div>
+                        </Back>
+                    </InnerContainer>
+            </Container>
+        </NavLink>
     )
 }
 

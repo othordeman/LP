@@ -1,7 +1,9 @@
-import React, { useState} from "react";
-import {Container, Wrapper, Content, Logo, Nav__List, MenuSwapper } from './Header.styles'
-import { Link, NavLink } from "react-router-dom";
+import React from "react";
+import {Container, Wrapper, Content, Logo, NavList, MenuSwapper } from './Header.styles'
+import {  NavLink } from "react-router-dom";
 import { useOutsideClickAleart } from "../../hooks/useOutsideClickAleart";
+import { Icon } from '@iconify/react';
+
 
 /* 
     Header.
@@ -15,8 +17,6 @@ import { useOutsideClickAleart } from "../../hooks/useOutsideClickAleart";
 const Header = () => {
     const {showMenu, setShowMenu, ref} = useOutsideClickAleart(false);
 
-
-
     const handleNavBar = () => (
         setShowMenu(prevValue => !prevValue)
     );
@@ -26,23 +26,23 @@ const Header = () => {
             <Wrapper showMenu={showMenu}>
                 <Content>
                     <Logo>
-                        <Link to='/'>
-                            Anderssons LP
-                        </Link>
+                        {/* <NavLink to='/'>
+                            mb go without a logo? 
+                        </NavLink> */}
                     </Logo>
-                    <Nav__List> 
-                        <NavLink to='/' end className={({ isActive }) => (isActive ? "nav__link first__link link-active" : "nav__link first__link")}><i className="uil uil-estate nav__icon"> </i> Hem </NavLink>
-                        <NavLink to='/about' className={({ isActive }) => (isActive ? "nav__link second__link link-active" : "nav__link second__link")}><i className="uil uil-user nav__icon"> </i> Om  </NavLink>
-                        <NavLink to='/contact'className={({ isActive }) => (isActive ? "nav__link third__link link-active" : "nav__link third__link")}><i className="uil uil-message nav__icon"></i> Kontakt </NavLink>
-                        <NavLink to='/login'className={({ isActive }) => (isActive ? "nav__link fourth__link link-active" : "nav__link fourth__link")}><i className="uil uil-message nav__icon"></i> Logga In </NavLink> 
-                    </Nav__List> 
+                    <NavList> 
+                        <NavLink to='/' end className={({ isActive }) => (isActive ? "nav__link first__link link-active" : "nav__link first__link")}><Icon className="nav__icon" icon="uil:estate"/> Hem </NavLink>
+                        <NavLink to='/about' className={({ isActive }) => (isActive ? "nav__link second__link link-active" : "nav__link second__link")}><Icon className="nav__icon" icon="uil:user"/> Om  </NavLink>
+                        <NavLink to='/contact' className={({ isActive }) => (isActive ? "nav__link third__link link-active"  : "nav__link third__link")}><Icon className="nav__icon" icon="uil:message"/> Kontakt </NavLink>
+                        <NavLink to='/login'className={({ isActive }) => (isActive ? "nav__link fourth__link link-active" : "nav__link fourth__link")}><Icon className="nav__icon" icon="uil:message"/> Logga In </NavLink> 
+                    </NavList> 
                 </Content>
             </Wrapper>
             <MenuSwapper onClick={handleNavBar} >
                 {showMenu ? 
-                    <i className="uil uil-times"></i>
+                    <Icon className="close" icon="uil:times" />
                         :
-                    <i className="uil uil-apps"></i>
+                    <Icon className="open" icon="uil:apps" />
                 }
             </MenuSwapper>
         </Container>

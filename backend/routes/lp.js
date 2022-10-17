@@ -18,14 +18,12 @@ const lp = require("../src/lp.js");
 
 
 //Every lp
-router.get('/lp', (req, res) => lp.getAllLp(req, res));
-
+router.get('/:page', (req, res) => lp.getAllLp(req, res));
 
 //ONE lp
 router.get('/lp/:id', (req, res) => lp.getALp(req, res));
 
-router.get('/search/:query', (req, res) => lp.searchAllLp(req, res));
-
+router.get('/search/:query/', (req, res) => lp.searchAllLp(req, res));
 
 
 // router.post('/lp', (req, res) => {

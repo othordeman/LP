@@ -7,12 +7,16 @@ const lp = {
 
     getAllLp: async function (req, res) {
 
+
+
         let db;
         
         try {
             db = await database.getDb();
-
-            const result = await db.collection.find({}).sort({Pris:-1}).limit(20).toArray();
+            
+            var page = parseInt(req.params.page);
+            const result = await db.collection.find({}).sort({Pris:-1}).limit(page).toArray();
+            
             if (result) { 
                 return res.json({result});
             }
@@ -61,10 +65,9 @@ const lp = {
 
         try {
             db = await database.getDb();
+            console.log(req.params)
 
             const result = await db.collection.find({ $text: { $search: req.params.query}}).toArray();
-
-
             if (result) { 
                 return res.json({result});
             }
