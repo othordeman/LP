@@ -3,10 +3,9 @@ import lp4 from '../images/lp4.jpg'
 import styled from "styled-components";
 
 
-
+/*  since there is no logic and only plain css in the About page, I placed everything in the same file,  */
 
 export const Wrapper = styled.div `
-
 
 background: linear-gradient(
             to bottom,
@@ -14,7 +13,6 @@ background: linear-gradient(
             rgba(0, 0, 0, 0) 100%
         ),
         url(${lp4}), var(--darkGrey);
-    //background-size: 100%, cover; // Kolla med my om hon gillar de bäst med eller utan dennna 
     height: 750px;
     position: relative;
     animation: animateHeroimage 1s;
@@ -28,16 +26,11 @@ background: linear-gradient(
         }
     }
 
-
     @media screen and (max-width: 768px) {
         background: unset;
 
     }
-
-
 `;
-
-
 
 
 export const Text = styled.div `
@@ -50,17 +43,11 @@ export const Text = styled.div `
         padding-bottom: 2rem;
     }
 
-
     @media screen and (max-width: 768px) {
         padding: 10px 2rem;
         color: #E1D9D1;
 
-
     }
-
-
-
-
 `;
 
 
@@ -72,7 +59,6 @@ const About = () => {
     return (
         <Wrapper >
                 <Text>
-
                     <h1> Om </h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore 
@@ -93,8 +79,6 @@ const About = () => {
                 </Text>
         </Wrapper>
     )
-
-
 }
    
 export default About

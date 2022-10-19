@@ -80,7 +80,7 @@ export const GlobalStyle = createGlobalStyle`
   body {  
     margin: 0;
     padding: 0;
-    background-color: var(--hue-color);
+    background-color: #010203;
     color: #fff;
 
     h1 {

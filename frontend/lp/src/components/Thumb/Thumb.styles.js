@@ -32,7 +32,7 @@ export const Front = styled.div`
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
-    background-color: #F3ECE7;
+    background-color: whitesmoke; //#F3ECE7;
     color: black;
     border-radius: 20px;
 
@@ -51,15 +51,15 @@ export const Back = styled.div`
     backface-visibility: hidden;
     border-radius: 20px;
 
-    background-color: black;
-    color: antiquewhite;
+    background-color: var(--hue-color);
+    color: whitesmoke;
     transform: rotateY(180deg);
 
     div{
         margin-top: 6rem;
     }
     p{
-        margin-top: 2rem;
+        margin: 2rem .5rem 0 .5rem;
     }
 `;
 

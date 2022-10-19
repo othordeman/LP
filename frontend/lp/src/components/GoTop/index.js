@@ -6,7 +6,6 @@ const GoTop = () =>{
 
     const [showGoTop, setShowGoTop] = useState(false);
 
-
     useEffect(() => {
         const handleScrollButtonVisibility = () => {
             window.pageYOffset > 300 ?  setShowGoTop(true) : setShowGoTop(false);
@@ -19,12 +18,9 @@ const GoTop = () =>{
         }
     },[])
 
-
     function handleScrollToTop() {
         window.scrollTo({top: 0, behavior: 'smooth'})
     }
-
-
 
     return(
         <>

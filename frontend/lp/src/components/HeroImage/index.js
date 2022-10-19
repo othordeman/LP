@@ -8,7 +8,7 @@ import { Wrapper, Content, Text } from './HeroImage.styles'
         <Wrapper>
             <Content>
                 <Text>
-                    <h1> Välkommen till Anderssons Vinyl! </h1>
+                    <h1> Välkommen </h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore 
                         magna aliqua. Ut enim ad minim veniam, quis nostrud 

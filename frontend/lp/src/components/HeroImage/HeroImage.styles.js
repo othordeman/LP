@@ -1,19 +1,18 @@
 
 import styled from 'styled-components';
-import lp1 from '../../images/lp1.jpg'
+import lp1 from '../../images/lp1cropped.jpg'
+import hehj from '../../images/hej.jpg'
 
 export const Wrapper = styled.div`
-    background: linear-gradient(
+   background: linear-gradient(
             to bottom,
             rgba(0, 0, 0, 0) 49%,
             rgba(0, 0, 0, 0) 100%
         ),
-        url(${lp1}), var(--darkGrey);
-    background-size: 100%, cover;
-    background-position: center;
-    height: 700px;
-    position: relative;
-    animation: animateHeroimage 1s;
+        url(${lp1});
+        
+    height: 720px;
+    background-size: cover;
 
     @keyframes animateHeroimage {
         from {
@@ -23,7 +22,22 @@ export const Wrapper = styled.div`
             opacity: 1;
         }
     }
+
+    p, h1{
+        margin: 2rem;
+    }
+
+    
+    @media screen and (max-width: 767px ) {
+        background: unset;
+        background-color: black;
+        color: whitesmoke;
+        
+    }
 `;
+
+
+
 
 export const Content = styled.div`
 
@@ -33,7 +47,26 @@ export const Content = styled.div`
 
 `;
 
+
+
+
 export const Text = styled.div`
+    z-index: 100;
+    max-width: 700px;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    margin-right: 20px;
+    min-height: 100px;
+    color: var(--white);
+    z-index: 1;
+    
+
+
+`;
+
+//f örsta bilden
+/* export const Text = styled.div`
     z-index: 100;
     max-width: 700px;
     position: absolute;
@@ -48,5 +81,5 @@ export const Text = styled.div`
         margin-bottom: 1rem;
     }
 
-`;
+`; */
 

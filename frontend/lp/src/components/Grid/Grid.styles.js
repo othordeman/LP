@@ -12,10 +12,11 @@ export const Wrapper = styled.div `
 
     @media screen and (max-width: 1400px){
         padding: 4rem;
-
     }
 
-
+    @media screen and (max-width: 767px){
+        padding: 1rem;
+    }
 `;
 
 export const Content = styled.div `
@@ -24,6 +25,10 @@ export const Content = styled.div `
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 2.5rem;
 
+
+    a {
+        margin: 0 auto;
+    }
 
 `;
 

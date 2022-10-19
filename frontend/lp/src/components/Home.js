@@ -29,8 +29,7 @@ const Home = () => {
             <HeroImage />
             <SearchBar setSearchTerm={setSearchTerm} />
             {loading ? <Loader /> : 
-            <Grid header ={searchTerm ? `Visar ${ state.result.length } av ${ state.result.length } resultat ` : 'Utvalda LPs' }>
-
+            <Grid header={searchTerm ? `Visar ${ state.result.length } av ${ state.result.length } resultat ` : 'Utvalda LPs' }>
                 {state.result.length > 0 ? (state.result.map(lp => (
                     <Thumb
                         key={lp._id}
@@ -45,7 +44,6 @@ const Home = () => {
                     <h2 style={{width: "600px"}}> Tyvärr kunde inget hittas med termen "{searchTerm}"</h2>
                 )
                 }
-
             </Grid>
             }
             <GoTop/>
